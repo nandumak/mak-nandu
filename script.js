@@ -124,6 +124,23 @@ const fallbackAnime = [
 let animeList = [...fallbackAnime];
 let activeGenre = "all";
 const expandedDescriptions = new Set();
+const netflixTitleUrls = {
+  "attack on titan": "https://www.netflix.com/title/70299043",
+  "demon slayer": "https://www.netflix.com/title/81091393",
+  "demon slayer: kimetsu no yaiba": "https://www.netflix.com/title/81091393",
+  "jujutsu kaisen": "https://www.netflix.com/title/81278456",
+  "one piece": "https://www.netflix.com/title/80107103",
+  "naruto: shippuden": "https://www.netflix.com/title/80000603",
+  "death note": "https://www.netflix.com/title/70204970",
+  "fullmetal alchemist: brotherhood": "https://www.netflix.com/title/70204981",
+  "my hero academia": "https://www.netflix.com/title/80135674",
+  "haikyu!!": "https://www.netflix.com/title/80090673",
+  "haikyu": "https://www.netflix.com/title/80090673",
+  "spy x family": "https://www.netflix.com/title/81511410",
+  "chainsaw man": "https://www.netflix.com/title/81215627",
+  "hunter x hunter": "https://www.netflix.com/title/70300472",
+  "hunter x hunter (2011)": "https://www.netflix.com/title/70300472"
+};
 
 const animeGrid = document.querySelector("#animeGrid");
 const searchInput = document.querySelector("#searchInput");
@@ -136,6 +153,7 @@ const crunchyrollLink = document.querySelector("#crunchyrollLink");
 const netflixLink = document.querySelector("#netflixLink");
 const primeLink = document.querySelector("#primeLink");
 const youtubeLink = document.querySelector("#youtubeLink");
+const justWatchLink = document.querySelector("#justWatchLink");
 const episodeList = document.querySelector("#episodeList");
 
 function normalizeApiAnime(item) {
@@ -246,9 +264,15 @@ function toggleDescription(anime) {
 function updateSourceLinks(title) {
   const query = encodeURIComponent(title);
   crunchyrollLink.href = `https://www.crunchyroll.com/search?q=${query}`;
-  netflixLink.href = `https://www.netflix.com/search?q=${query}`;
+  netflixLink.href = getNetflixUrl(title);
   primeLink.href = `https://www.primevideo.com/search/ref=atv_nb_sr?phrase=${query}`;
   youtubeLink.href = `https://www.youtube.com/results?search_query=${query}%20official%20anime`;
+  justWatchLink.href = `https://www.justwatch.com/in/search?q=${query}`;
+}
+
+function getNetflixUrl(title) {
+  const key = title.toLowerCase();
+  return netflixTitleUrls[key] || `https://www.netflix.com/search?q=${encodeURIComponent(title)}`;
 }
 
 function renderEpisodePlaceholders(anime) {
