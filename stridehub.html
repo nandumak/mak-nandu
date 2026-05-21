@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StrideHub Footwear Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stridehub.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="StrideHub home">
+      <span class="brand-mark">S</span>
+      <span>StrideHub</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#products">Shop</a>
+      <a href="#collections">Collections</a>
+      <a href="#support">Support</a>
+    </nav>
+    <button class="cart-button" type="button" aria-label="Open cart">
+      <span>Cart</span>
+      <strong id="cartCount">0</strong>
+    </button>
+  </header>
+
+  <main>
+    <section class="shop-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">New season footwear</p>
+        <h1>StrideHub</h1>
+        <p>Shop slippers, chapels, sneakers, shoes, boots, cleats, and everyday essentials for every kind of step.</p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#products">Shop footwear</a>
+          <a class="secondary-link" href="#collections">View collections</a>
+        </div>
+      </div>
+      <div class="hero-media" aria-label="Featured footwear display">
+        <img src="assets/footwear-hero.png" alt="Footwear store display with sneakers, shoes, boots, chapels, slippers, and cleats">
+      </div>
+    </section>
+
+    <section class="stats-row" aria-label="Store benefits">
+      <div>
+        <strong>120+</strong>
+        <span>styles in stock</span>
+      </div>
+      <div>
+        <strong>24h</strong>
+        <span>dispatch on orders</span>
+      </div>
+      <div>
+        <strong>30d</strong>
+        <span>easy exchanges</span>
+      </div>
+    </section>
+
+    <section class="collections" id="collections">
+      <div class="section-heading">
+        <p class="eyebrow">Collections</p>
+        <h2>Find the right pair fast</h2>
+      </div>
+      <div class="collection-grid">
+        <button class="collection-tile active" type="button" data-category="all">
+          <img src="assets/footwear-hero.png" alt="">
+          <span>All</span>
+          <strong>Every style</strong>
+        </button>
+        <button class="collection-tile" type="button" data-category="Sneakers">
+          <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=500&q=80" alt="">
+          <span>Sneakers</span>
+          <strong>Daily comfort</strong>
+        </button>
+        <button class="collection-tile" type="button" data-category="Boots">
+          <img src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=500&q=80" alt="">
+          <span>Boots</span>
+          <strong>Built tough</strong>
+        </button>
+        <button class="collection-tile" type="button" data-category="Cleats">
+          <img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=500&q=80" alt="">
+          <span>Cleats</span>
+          <strong>Game ready</strong>
+        </button>
+        <button class="collection-tile" type="button" data-category="Chapels">
+          <img src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=500&q=80" alt="">
+          <span>Chapels</span>
+          <strong>Easy wear</strong>
+        </button>
+      </div>
+    </section>
+
+    <section class="storefront" id="products">
+      <aside class="filters" aria-label="Product filters">
+        <div class="filter-block">
+          <label for="searchInput">Search footwear</label>
+          <input id="searchInput" type="search" placeholder="Search shoes, boots...">
+        </div>
+        <div class="filter-block">
+          <label for="sizeFilter">Size</label>
+          <select id="sizeFilter">
+            <option value="all">All sizes</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+          </select>
+        </div>
+        <div class="filter-block">
+          <label for="sortFilter">Sort</label>
+          <select id="sortFilter">
+            <option value="featured">Featured</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+            <option value="rating">Top rated</option>
+          </select>
+        </div>
+        <div class="filter-block">
+          <label>Price range</label>
+          <input id="priceRange" type="range" min="20" max="180" value="180">
+          <div class="range-row">
+            <span>$20</span>
+            <strong id="priceLabel">$180</strong>
+          </div>
+        </div>
+      </aside>
+
+      <div class="product-area">
+        <div class="product-toolbar">
+          <div>
+            <p class="eyebrow">Shop</p>
+            <h2>Footwear catalog</h2>
+          </div>
+          <p id="resultCount">0 products</p>
+        </div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="support-band" id="support">
+      <div>
+        <p class="eyebrow">Fit support</p>
+        <h2>Not sure what to choose?</h2>
+      </div>
+      <p>Every order includes size guidance, secure payment, tracked delivery, and simple exchanges.</p>
+    </section>
+  </main>
+
+  <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <p class="eyebrow">Your order</p>
+        <h2>Cart</h2>
+      </div>
+      <button class="icon-button" id="closeCart" type="button" aria-label="Close cart">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>Total</span>
+        <strong id="cartTotal">$0</strong>
+      </div>
+      <button class="checkout-button" type="button">Checkout</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <script src="stridehub.js"></script>
+</body>
+</html>

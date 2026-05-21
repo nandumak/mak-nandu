@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nanda Kishor K (MAK) | Computer Science Engineer & Developer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Futuristic personal portfolio of Nanda Kishor K (MAK), a Computer Science Engineering student and developer at Vimal Jyothi Engineering College.">
+  <meta name="keywords" content="Nanda Kishor K, MAK, Portfolio, CS Student, Software Developer, Vimal Jyothi Engineering College, Kasargod, Kannur">
+  <meta name="author" content="Nanda Kishor K (MAK)">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Custom Cursor Elements -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <div class="custom-cursor-glow" id="custom-cursor-glow"></div>
+
+  <!-- Fullscreen Particle Canvas Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Mouse Gradient Follower -->
+  <div class="mouse-gradient-bg" id="mouse-gradient-bg"></div>
+
+  <!-- Loader Screen -->
+  <div class="loader-wrapper" id="loader-wrapper">
+    <div class="loader-content">
+      <div class="loader-logo">MAK.DEV</div>
+      <div class="loader-terminal" id="loader-terminal">
+        <!-- Script lines will be dynamically inserted here -->
+      </div>
+      <div class="loader-progress-bar">
+        <div class="loader-progress" id="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">
+        MAK<span>.DEV</span>
+      </a>
+      
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-link active"><a href="#hero">Home</a></li>
+        <li class="nav-link"><a href="#about">About</a></li>
+        <li class="nav-link"><a href="#skills">Skills</a></li>
+        <li class="nav-link"><a href="#projects">Projects</a></li>
+        <li class="nav-link"><a href="#education">Education</a></li>
+        <li class="nav-link"><a href="#certifications">Certificates</a></li>
+        <li class="nav-link"><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="system-status">
+        <span class="status-dot"></span>
+        <span>SYS: ONLINE</span>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="content-wrapper">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="hero-pretitle">Welcome to the future of development</p>
+          <h1 class="hero-name">
+            Hi, I'm Nanda Kishor K
+            <span>(MAK)</span>
+          </h1>
+          <div class="hero-tagline" id="hero-tagline">CS Engineer • Developer • Creator • Innovator</div>
+          <p class="hero-desc">
+            A passionate Computer Science Engineering student specialized in crafting premium, high-performance web applications and solving complex algorithmic challenges. Currently studying at Vimal Jyothi Engineering College.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-terminal"></i> Initiate Contact</a>
+            <a href="#projects" class="btn btn-secondary"><i class="fa-solid fa-code"></i> View Projects</a>
+          </div>
+        </div>
+
+        <div class="hero-portrait-wrapper">
+          <div class="hero-portrait-container glass-card" data-tilt>
+            <div class="portrait-scanner"></div>
+            <!-- Profile image falls back to generic profile icons if the file is missing -->
+            <img src="mak2.webp" alt="Nanda Kishor K (MAK) Profile Picture" class="hero-portrait-img" onerror="this.src='mak.png.jpg'; this.onerror=function(){this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=500&q=80';};">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text glass-card" data-tilt>
+            <p class="about-intro-highlight">
+              Engineering solutions at the intersection of logic, design, and performance.
+            </p>
+            <p>
+              I am a Computer Science Engineering student from Kasargod, pursuing my academic excellence at Vimal Jyothi Engineering College in Kannur. My journey as a developer began with a curiosity about how lines of code translate into interactive digital experiences.
+            </p>
+            <p>
+              Today, I focus on building responsive web systems, working with modern frontend technologies, and designing intuitive interfaces. I am dedicated to writing clean, maintainable code and continuous self-improvement through hackathons, certifications, and real-world project creation.
+            </p>
+            <div class="hero-actions">
+              <a href="#" class="btn btn-primary" id="btn-resume-download"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+            </div>
+          </div>
+
+          <div class="about-stats">
+            <div class="glass-card stat-item" data-tilt>
+              <span class="stat-num">B.Tech</span>
+              <span class="stat-label">Computer Science</span>
+            </div>
+            <div class="glass-card stat-item" data-tilt>
+              <span class="stat-num">VJEC</span>
+              <span class="stat-label">Engineering College</span>
+            </div>
+            <div class="glass-card stat-item" data-tilt>
+              <span class="stat-num">8.5+</span>
+              <span class="stat-label">Approx CGPA</span>
+            </div>
+            <div class="glass-card stat-item" data-tilt>
+              <span class="stat-num">15+</span>
+              <span class="stat-label">Project Builds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <h2 class="section-title">Core Skills</h2>
+        <div class="skills-grid">
+          <div class="skills-bars glass-card" data-tilt>
+            <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-code-branch" style="color: var(--neon-blue);"></i> Development Metrics</h3>
+            
+            <div class="skill-bar-group">
+              <div class="skill-info">
+                <span class="skill-name">Python & Algorithmic Logic</span>
+                <span class="skill-pct" data-pct="90">90%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-group">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript & Frontend Core (HTML5/CSS3)</span>
+                <span class="skill-pct" data-pct="85">85%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-group">
+              <div class="skill-info">
+                <span class="skill-name">React & Web App Frameworks</span>
+                <span class="skill-pct" data-pct="80">80%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-group">
+              <div class="skill-info">
+                <span class="skill-name">Database Management & SQL</span>
+                <span class="skill-pct" data-pct="75">75%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-interactive-container">
+            <div class="tech-orbits-box">
+              <div class="tech-center-orb">MAK</div>
+              
+              <!-- Inner Orbiting Rings -->
+              <div class="orbit-ring-1">
+                <div class="floating-tech-icon tech-icon-1" title="React"><i class="fa-brands fa-react"></i></div>
+                <div class="floating-tech-icon tech-icon-2" title="Python"><i class="fa-brands fa-python"></i></div>
+                <div class="floating-tech-icon tech-icon-3" title="JS"><i class="fa-brands fa-js"></i></div>
+                <div class="floating-tech-icon tech-icon-4" title="HTML5"><i class="fa-brands fa-html5"></i></div>
+              </div>
+              
+              <!-- Outer Orbiting Rings -->
+              <div class="orbit-ring-2">
+                <div class="floating-tech-icon tech-icon-5" title="CSS3"><i class="fa-brands fa-css3-alt"></i></div>
+                <div class="floating-tech-icon tech-icon-6" title="Git"><i class="fa-brands fa-git-alt"></i></div>
+                <div class="floating-tech-icon tech-icon-7" title="Node.js"><i class="fa-brands fa-node-js"></i></div>
+                <div class="floating-tech-icon tech-icon-8" title="SQL"><i class="fa-solid fa-database"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        
+        <!-- Filter Controls -->
+        <div class="projects-filter-container">
+          <button class="filter-btn active" data-filter="all">All Systems</button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="ui">Modern UI/UX</button>
+          <button class="filter-btn" data-filter="logic">Logic & Systems</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          
+          <!-- Project 1: StrideHub Footwear Store -->
+          <div class="glass-card project-card" data-category="web" data-tilt>
+            <div class="project-media">
+              <img src="portfolio.webp" alt="StrideHub Footwear Store Showcase" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80';">
+              <div class="project-overlay">
+                <a href="stridehub.html" class="project-icon-btn" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#" class="project-icon-btn" title="GitHub Repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3 Grid</span>
+                <span class="project-tag">Pure JS</span>
+              </div>
+              <h3 class="project-title">StrideHub Footwear Store</h3>
+              <p class="project-desc">A highly optimized ecommerce storefront interface. Features sorting filters, dynamic sizing selections, price range controllers, and a sliding interactive cart state tracker.</p>
+              <div class="project-footer">
+                <a href="stridehub.html" class="project-link-simple">Launch Project <i class="fa-solid fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Advanced Interactive Login Portal -->
+          <div class="glass-card project-card" data-category="ui" data-tilt>
+            <div class="project-media">
+              <img src="mak3.webp" alt="MAK Login UI Mockup" onerror="this.src='https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=500&q=80';">
+              <div class="project-overlay">
+                <a href="mak.html" class="project-icon-btn" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#" class="project-icon-btn" title="GitHub Repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">Glassmorphism</span>
+                <span class="project-tag">3D Hover</span>
+                <span class="project-tag">Cursor Glow</span>
+              </div>
+              <h3 class="project-title">MAK Interactive Authentication</h3>
+              <p class="project-desc">An immersive 3D-tilt login system with full page custom particles, floating background depth layers, glowing inputs, and mouse-following active spotlight gradients.</p>
+              <div class="project-footer">
+                <a href="mak.html" class="project-link-simple">Launch Project <i class="fa-solid fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Aetheria.AI Chatbot -->
+          <div class="glass-card project-card" data-category="web" data-tilt>
+            <div class="project-media">
+              <img src="haqhah.webp" alt="AI Interface" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=500&q=80';">
+              <div class="project-overlay">
+                <a href="#" class="project-icon-btn" title="Live Preview"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#" class="project-icon-btn" title="GitHub Repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">API Integration</span>
+                <span class="project-tag">AI Models</span>
+                <span class="project-tag">JS Async</span>
+              </div>
+              <h3 class="project-title">Aetheria AI Assistant</h3>
+              <p class="project-desc">An AI-driven chat client featuring markdown message renders, streaming type answers, speech synthesis recognition, and customizable system prompt configurations.</p>
+              <div class="project-footer">
+                <a href="#" class="project-link-simple">View System <i class="fa-solid fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Ollama Local API Controller -->
+          <div class="glass-card project-card" data-category="logic" data-tilt>
+            <div class="project-media">
+              <img src="w4trw.jpg" alt="Python Scripting" onerror="this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80';">
+              <div class="project-overlay">
+                <a href="#" class="project-icon-btn" title="Run Script"><i class="fa-solid fa-play"></i></a>
+                <a href="#" class="project-icon-btn" title="GitHub Repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Ollama API</span>
+                <span class="project-tag">Scripting</span>
+              </div>
+              <h3 class="project-title">Ollama API Python Orchestration</h3>
+              <p class="project-desc">A Python utility script linking Ollama local models to external data parses. Handles request throttling, temperature settings, and logs output pipelines locally.</p>
+              <div class="project-footer">
+                <a href="#" class="project-link-simple">Check Code <i class="fa-solid fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="education-section" id="education">
+      <div class="container">
+        <h2 class="section-title">Education Pathway</h2>
+        <div class="timeline">
+          
+          <!-- Education Item 1 -->
+          <div class="timeline-item">
+            <span class="timeline-date">2023 - Present</span>
+            <div class="glass-card timeline-card" data-tilt>
+              <h3 class="timeline-title">B.Tech in Computer Science & Engineering</h3>
+              <div class="timeline-institution">Vimal Jyothi Engineering College, Kannur</div>
+              <p class="timeline-details">Currently pursuing core engineering domains: Data Structures, Algorithms, Object Oriented Programming, DBMS, and Web Architecture. Active member of technical and innovation societies.</p>
+            </div>
+          </div>
+
+          <!-- Education Item 2 -->
+          <div class="timeline-item">
+            <span class="timeline-date">2021 - 2023</span>
+            <div class="glass-card timeline-card" data-tilt>
+              <h3 class="timeline-title">Higher Secondary Education (Science)</h3>
+              <div class="timeline-institution">Board of Higher Secondary Education, Kasargod</div>
+              <p class="timeline-details">Focused on Computer Science, Mathematics, Physics, and Chemistry. Established fundamental logic frameworks, binary systems, and basic programming concepts.</p>
+            </div>
+          </div>
+
+          <!-- Education Item 3 -->
+          <div class="timeline-item">
+            <span class="timeline-date">Graduated 2021</span>
+            <div class="glass-card timeline-card" data-tilt>
+              <h3 class="timeline-title">Secondary School Certificate (SSC)</h3>
+              <div class="timeline-institution">High School Academy, Kasargod</div>
+              <p class="timeline-details">Completed general school curricula with distinction, leading school clubs, participating in math olympiads, and taking initial computer science workshops.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & ACHIEVEMENTS SECTION -->
+    <section class="certifications-section" id="certifications">
+      <div class="container">
+        <h2 class="section-title">Credentials & Awards</h2>
+        <div class="grid-two-col">
+          
+          <!-- Certifications List -->
+          <div class="glass-card" data-tilt>
+            <h3 style="margin-bottom: 25px;"><i class="fa-solid fa-award" style="color: var(--neon-cyan);"></i> Tech Certifications</h3>
+            <div class="cards-vertical-list">
+              
+              <div class="cert-card">
+                <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+                <div class="cert-info">
+                  <h4 class="cert-title">Python Core & Programming Systems</h4>
+                  <span class="cert-issuer">Google Career Certificates / Coursera</span>
+                  <span class="cert-date">Issued Jan 2025</span>
+                </div>
+              </div>
+
+              <div class="cert-card">
+                <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
+                <div class="cert-info">
+                  <h4 class="cert-title">Advanced Frontend Engineering (React Core)</h4>
+                  <span class="cert-issuer">FreeCodeCamp / Meta Front-End Cert</span>
+                  <span class="cert-date">Issued Oct 2024</span>
+                </div>
+              </div>
+
+              <div class="cert-card">
+                <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="cert-info">
+                  <h4 class="cert-title">Cybersecurity Foundations</h4>
+                  <span class="cert-issuer">ISACA Student Chapter VJEC</span>
+                  <span class="cert-date">Issued Jul 2024</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Achievements List -->
+          <div class="glass-card" data-tilt>
+            <h3 style="margin-bottom: 25px;"><i class="fa-solid fa-trophy" style="color: var(--neon-pink);"></i> Achievements & Honors</h3>
+            <div class="cards-vertical-list">
+              
+              <div class="ach-card">
+                <div class="ach-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <div class="ach-info">
+                  <h4 class="ach-title">Smart India Hackathon Participant</h4>
+                  <span class="ach-issuer">Ministry of Education, Govt of India</span>
+                  <span class="ach-date">Dec 2024</span>
+                </div>
+              </div>
+
+              <div class="ach-card">
+                <div class="ach-icon"><i class="fa-solid fa-microchip"></i></div>
+                <div class="ach-info">
+                  <h4 class="ach-title">1st Place - VJEC Internal Coding Blitz</h4>
+                  <span class="ach-issuer">VJEC IEEE Student Branch</span>
+                  <span class="ach-date">Sep 2024</span>
+                </div>
+              </div>
+
+              <div class="ach-card">
+                <div class="ach-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <div class="ach-info">
+                  <h4 class="ach-title">Innovation Grant Nominee</h4>
+                  <span class="ach-issuer">VJEC Startup & Innovation Cell</span>
+                  <span class="ach-date">May 2024</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Establish Link</h2>
+        <div class="contact-grid">
+          
+          <!-- Contact Info -->
+          <div class="glass-card contact-info-panel" data-tilt>
+            <h3>Get in Touch</h3>
+            <p class="contact-lead">Have a question, project proposal, or looking to collaborate? Drop a message into the communication node.</p>
+            
+            <div class="contact-details">
+              
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-detail-text">
+                  <h4>Email Node</h4>
+                  <p>nandakishorkmak@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="contact-detail-text">
+                  <h4>Operations Base</h4>
+                  <p>Kasargod / Kannur, Kerala, India</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="contact-detail-text">
+                  <h4>Education Hub</h4>
+                  <p>Vimal Jyothi Engineering College</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Social Media Handles -->
+            <div class="social-links-row">
+              <a href="#" class="social-link-btn gh" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" class="social-link-btn li" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" class="social-link-btn in" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="social-link-btn tw" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="glass-card" data-tilt>
+            <form class="cyber-form" id="cyber-contact-form">
+              
+              <div class="form-row-two">
+                <div class="input-container">
+                  <input type="text" id="form-name" required>
+                  <label for="form-name">Ident Name</label>
+                </div>
+                <div class="input-container">
+                  <input type="email" id="form-email" required>
+                  <label for="form-email">Mail Node Address</label>
+                </div>
+              </div>
+
+              <div class="input-container">
+                <input type="text" id="form-subject" required>
+                <label for="form-subject">Message Header</label>
+              </div>
+
+              <div class="input-container">
+                <textarea id="form-message" required></textarea>
+                <label for="form-message">Communication Payload</label>
+              </div>
+
+              <!-- Interactive Feedback Terminal inside form -->
+              <div class="form-feedback-console" id="form-feedback-console">
+                <span>System status: Awaiting instruction inputs...</span><span class="console-cursor"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Transmit Message</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-logo">MAK<span>.DEV</span></div>
+        <p class="footer-copyright">&copy; 2026 Nanda Kishor K (MAK). All rights secured.</p>
+        <p class="footer-tech">SYS_BUILT: HTML5 • CSS3_GRID • NEON_ENGINE • VANILLA_JS</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- JavaScript Links -->
+  <script src="script.js"></script>
+</body>
+</html>
